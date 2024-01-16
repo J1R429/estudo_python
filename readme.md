@@ -169,9 +169,105 @@ else:
 ```
 
 
-
-
 # SEÇÃO 6: ESTRUTURAS DE REPETIÇÃO EM PYTHON
+- loops - utilizamops para iterar sobre sequencias ou sobre valores iteraveis
+    - for
+    - while - 
+
+- exemplos de iteraveis- string, listas, range
+    - no range o valor final não é incluido
+
+```python
+# exemplo de estrutura
+
+for item in interavel:
+    //execução do loop
+```
+
+```python
+#exemplo de for 1
+
+nome = 'jessica fernandes'
+lista = [1, 3, 5, 7, 9]
+numeros = range [1, 10]
+
+for letra in nome:
+    print(letra)
+
+for numero in lista:
+    print(numero)
+
+for numero in range(1, 10 ):
+    print(nuemro)
+```
+
+- no print se não desejar que pule uma linha, ao final dos () é necessário colocar , end=''
+- a string pode ser multiplicada 
+
+```python
+nome = 'jessi'
+for num in range(1, 11):
+    print(f'{nome*num}')
+```
+
+- range - utilizados para criar sequencias numericas, não de forma aleatoria mas sim de maneira especifica
+- formas gerais
+    - range(valor de parada)
+    ```python
+    for num im range(11):
+        print(num)
+    ```
+    - range(valor_de_inicio, valor_de_parada)
+    ```python
+    for num in range(1, 11):
+        print(num)
+    ```
+    - range(valor_inicio, valor_parada, passo)
+    - neste é possivel decrementar exemplo (10, 0, -1)
+    ```python
+    for num in range(1, 10, 2):
+        print(num)
+    ```
+
+- while - expressão booleana
+    - sendo o loop repetido ate a expressão for verdadeira
+    - expressão booleana é toda expressão que o resultado é verdadeiro ou falso
+    - em um loop while é importante que o criterio se torne falso em algum momento 
+        - esse criterio que sera de incrementação vai ao final 
+    - no python não tem a expressão do while
+
+```python
+numero = 1
+
+while numero < 10:
+    print(numero)
+    numero = numero +1
+```
+```python
+resposta= ''
+
+while resposta != 'sim':
+    resposta = input('ja acabou jessia? ')
+```
+
+
+- sair do loop com o break, é sair de maneira projetada
+```python
+for numero in range(1, 11):
+    if numero == 6:
+        break
+    else:
+        print(numero)
+print('sai do loop')
+```
+
+```python
+while True:
+    comando = input('digite sair pra sair: ')
+    if comando == 'sair':
+        break    
+```
+
 # SEÇÃO 7: COLEÇÕES PYTHON
 # SEÇÃO 8: FUNÇÕES EM PYTHON
 # SEÇÃO 9: COMPREHENSIONS EM PYTHON
