@@ -138,9 +138,39 @@ valor1, valor2 = 1, 44
 
 # SEÇÃO 5: ESTRUTURAS LÓGICAS E CONDICIONAIS EM PYTHON
 
+## if, else, elif
+- estrutura condicional - 
+
+```python
+idade = 6
+
+if idade < 18:
+    print('menor de idade')
+elif idade ==18:
+    print('tem 18 anos')
+else:
+    print('maior de idade')
+```
+
+## estrutura logicas
+- and, or, not, is(é)
+    - operadores unários - not, is
+        - o is é como se fosse uma pergunta >> ativo =True; print(ativo is False); resultado será False 
+    - operadores binários - and, or
+
+```python
+ativo= True
+logado = True
+
+if ativo and logado:
+    print('bem-vindo usuário')
+else:
+    print ('vc precisa tivar a sua conta')
+```
 
 
-12+127+101+95
+
+12+127+101+95+45++++++++++++++++++++++
 # SEÇÃO 6: ESTRUTURAS DE REPETIÇÃO EM PYTHON
 # SEÇÃO 7: COLEÇÕES PYTHON
 # SEÇÃO 8: FUNÇÕES EM PYTHON
