@@ -1,30 +1,30 @@
 [SEÇÃO 1: APRESENTAÇÃO](#seção-1:-apresentação)
 [SEÇÃO 2: PREPARANDO O AMBIENTE](#seção-2:-preparando-o-ambiente)
 [SEÇÃO 3: INTRODUÇÃO Á LINGUAGEM PYTHON](#seção-3:-introdução-á-linguagem-python)
-[SEÇÃO 4: VARIÁVEIS E TIPOS DE DADOS EM PYTHON]
-[SEÇÃO 5: ESTRUTURAS LÓGICAS E CONDICIONAIS EM PYTHON]
-[SEÇÃO 6: ESTRUTURAS DE REPETIÇÃ EM PYTHON]
-[SEÇÃO 7: COLEÇÕES PYTHON]
-[SEÇÃO 8: FUNÇÕES EM PYTHON]
-[SEÇÃO 9: COMPREHENSIONS EM PYTHON]
-[SEÇÃO 10: EXPRESSÕES LAMBDAS E FUNÇÕES INTEGRADAS]
-[SEÇÃO 11: DEBUGANDO E TRATANDO ERROS]
-[SEÇÃO 12: TRABALHANDO COM MÓDULOS PYTHON]
-[SEÇÃO 13:]
-[SEÇÃO 14:]
-[SEÇÃO 15:]
-[SEÇÃO 16:]
-[SEÇÃO 17:]
-[SEÇÃO 18:]
-[SEÇÃO 19:]
-[SEÇÃO 20:]
-[SEÇÃO 21:]
-[SEÇÃO 22:]
-[SEÇÃO 23:]
-[SEÇÃO 24:]
-[SEÇÃO 25:]
-[SEÇÃO 26:]
-[SEÇÃO 27:]
+[SEÇÃO 4: VARIÁVEIS E TIPOS DE DADOS EM PYTHON](#)
+[SEÇÃO 5: ESTRUTURAS LÓGICAS E CONDICIONAIS EM PYTHON](#)
+[SEÇÃO 6: ESTRUTURAS DE REPETIÇÃ EM PYTHON](#)
+[SEÇÃO 7: COLEÇÕES PYTHON](#)
+[SEÇÃO 8: FUNÇÕES EM PYTHON](#)
+[SEÇÃO 9: COMPREHENSIONS EM PYTHON](#)
+[SEÇÃO 10: EXPRESSÕES LAMBDAS E FUNÇÕES INTEGRADAS](#)
+[SEÇÃO 11: DEBUGANDO E TRATANDO ERROS](#)
+[SEÇÃO 12: TRABALHANDO COM MÓDULOS PYTHON](#)
+[SEÇÃO 13:](#)
+[SEÇÃO 14:](#)
+[SEÇÃO 15:](#)
+[SEÇÃO 16:](#)
+[SEÇÃO 17:](#)
+[SEÇÃO 18:](#)
+[SEÇÃO 19:](#)
+[SEÇÃO 20:](#)
+[SEÇÃO 21:](#)
+[SEÇÃO 22:](#)
+[SEÇÃO 23:](#)
+[SEÇÃO 24:](#)
+[SEÇÃO 25:](#)
+[SEÇÃO 26:](#)
+[SEÇÃO 27:](#)
 
 
 # SEÇÃO 1: APRESENTAÇÃO
@@ -52,4 +52,38 @@
 - no programa pycharm é possivel salvar os novos projetos no ambiente virtual cirado acima
     - na tela de criar o novo projeto é necessário selecionar o interpretador existente e realizar a sua busca
 
+- para entrar no ambiente 
+    - workon nome_ambiente
+
 # SEÇÃO 3: INTRODUÇÃO Á LINGUAGEM PYTHON
+- pep8 - qualidade do codigo do python
+    - pep - proposta de melhoramento do pyton
+    - utilizar camel case para nome de classe
+    - utilizar nomes minusculos separados por underline para funções ou variaveis 
+    - utilize 4 espaços para identação, não recomendado utilizar o tab
+    - separar funções e definições de classe com 2 linhas em branco
+    - metodos dentro de uma classe devem ser separadas com uma unica linha em branco
+    - import devem ser feitos em linhas separadas
+    - sem espaço em expressões e instruções
+
+- o dir e o help
+    - são utilitários python para auxiliar na programação
+    - dir - apresenta todos os conteudos e funções/metodos disponiveis
+    - help - apresenta a documentação
+
+
+## recebendo dados do usuário
+- utilizar o input(em ingles significa entrada)
+- todo dado recebdo pelo input é do tipo string
+    - sendo necessário em muitos casos sua conversão pelo case
+        - int(input('')) 
+
+```python
+print('qual o seu nome?')
+nome=input()
+
+print ('seja bem vindo %s' % nome)
+
+# a porcentagem s %s pega a variavel mencionada no final e substitui, se tiver mais de uma vriavel mencionada no final neessário colocar entre ()
+```
+- %s é um marcado de posição que será substituido pelo valor da variavel 
