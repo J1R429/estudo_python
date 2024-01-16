@@ -170,7 +170,7 @@ else:
 
 
 
-12+127+101+95+45++++++++++++++++++++++
+
 # SEÇÃO 6: ESTRUTURAS DE REPETIÇÃO EM PYTHON
 # SEÇÃO 7: COLEÇÕES PYTHON
 # SEÇÃO 8: FUNÇÕES EM PYTHON
@@ -188,12 +188,56 @@ else:
 # SEÇÃO 20: TESTES COM PYTHON
 # SEÇÃO 21: GERENCIAMENTO DE MEMÓRIA EM PYTHON
 # SEÇÃO 22: CHEGAGEM DE TIPOS EM PYTHON
+
+
 # SEÇÃO 23: NOVIDADES DO PYTHON 3.8
+
+## operador walrus :=
+- permite realizar atribuição e retorno de valor em uma mesma expressão
+    - variavel:= expressão
+
+```python
+nome = 'roberto'
+print(nome)
+
+# com o novo operador fica
+print(nome := 'roberto')
+```
+
+```python
+cesta = [] #lista vazia
+fruta = input('informe a fruta: ')
+
+while fruta != 'jaca': #enquanto fruta for diferente de jaca
+    cesta.append(fruta) #incluir fruta na lista cesta
+    fruta = input('informe a fruta: ')
+
+# nova forma de realizar o codigo
+cesta = []
+while (fruta := input('informe a fruta: ')) != 'jaca':
+    cesta.append(fruta)
+```
+
+## argumentos somente posicionais
+- é utilizado a / para dizer que o que esta antes é apenas posicional
+- havendo mais um ponto a ser declarado posicional só colocar uma / ao final de tudo e não de cada
+
+```python
+def cumprimenta(nome, /):
+    return f'ola {nome}'
+
+print(cumprimenta('jessi')) #ira se rexecutado
+print(cumprimenta(nome='jessi')) #não será pq na definição da função foi colocado que nome é apenas posição
+```
+
+
 # SEÇÃO 24: PROJETO PYTHON 1 - GAME
 # SEÇÃO 25: PROJETO PYTHON 2 - MERCADO
 # SEÇÃO 26: PROJETO PYTHON 3 - BANCO
-# SEÇÃO 27: ENCERRAMENTO
 
+
+# SEÇÃO 27: ENCERRAMENTO
+- realizado
 
 
 
