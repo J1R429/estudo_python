@@ -269,7 +269,450 @@ while True:
 ```
 
 # SEÇÃO 7: COLEÇÕES PYTHON
+
+## listas
+- funciona como arrays em outras linguagens, com a diferença de ser dinamica e poder colocar qualque rtipo de dado 
+- dinamico pq não possui tamanho fisico
+- as listas não possuem tipo de dado fixo
+- representadas por []
+
+```python
+lista = list(range(11))
+```
+
+
+```python
+if 8 in lista:
+    print('encontrei o numero')
+else:
+    print('não encontrei o numero')
+```
+
+- lista.sort() - irá ordenar a lista
+
+- contar quantas vezes um elemento aparece >> lista.count(elemento)
+
+- incluir novos elementos >> lusta.append(novo_elemento)
+    - é possivel colocar uma lista dentro de outra lista
+
+- pode se determinar a posição do novo elemento >> lista.insert(posição, novo_elemento)
+    - deslocando os demais elementos para a direita da lista
+
+- pode somar as listas >> lista1= lista1 + lista2
+
+- pode reverter uma lista >> lista.reverse() -- com () vazios ou [::-1]
+
+- para copiar uma lista >> lista6 = lista2.copy()
+
+- len(lista) - para saber o numero de elementos de dentor da lista
+
+- lista.pop() >> remove o ultimo elemento e  retorna 
+    - se pode remover pelo inidice >> lista.pop(2)
+
+- para remover todos os elementos >> lista.clear()
+
+- para repetir os elementos da listas é só multiplicar a lista >>> lista = lista *3
+
+- converter uma string para uma lista, separando os elementos da lista pelo o espalo entre elas
+    - entre os () se pode especificar outro tip de separador exemplo (,)
+   ```python
+   curso = 'programação python'
+   curso2 = curso.split()
+    ```    
+
+- para faezr ao contrario, converter uma lsita em uma string se utiliza o join  
+    ```python
+    lista = ['programação', 'python']
+    curso = ' '.join(lista)
+    # estamos falando pega a lista pega espaço em cada elemento e transforma em uma string
+    ```
+
+- ha a possibilidade de criar listas om variaveis
+   ```python
+    cores = ['verde', 'amarelo', 'azul']
+    print(cores[0])
+    print(cores[1])
+    ```
+
+- para somar string em uma lista
+```python
+lista = ['i', 'l', 'o', 'v', 'e', 'y', 'o', 'u']
+soma = ' '
+for elemento in lista:
+    print(elemento)
+    soma = soma + elemento
+print (soma)
+```
+
+- para imprimir com o indice
+```python
+cores = ['verde', 'amarelo', 'azul']
+for indice, cor in enumerate(cores):
+    print(indice, cor)
+```
+
+- encontrar o indice de um elemento na lista >> index
+    - print(lista.index(indice_desejado))
+    - pode pedir pra buscar a aprtir de um indice em especifico com range
+        - print(numeor.index(5, 1)) #busca apartir do indice 1
+        - print(numeor.index(5, 6, 8)) #busca entr o indice  6 e 8 
+
+
+- procurar valor max, min, e tamanho da lista
+    - print(sum(lista)) - soma
+    - print(max(lista)) - valor maximo
+    - print(min(lista)) - valor minimo
+    - print(len(lista)) - tamanho da lista
+
+
+
+
+```python
+```
 # SEÇÃO 8: FUNÇÕES EM PYTHON
+- definindo funções
+    -   pequenas partes que executando uma tarefa específica
+    - pode ou não receber entrada de dados e retornar uma saida de dados
+    - muitos uteis para executar procdimentos similares por repetidas vezes
+    - a função da função é dry - não repetir o seu codigo
+- função integrada é uma built-in
+- nome da função sempre com letra minusculo e separa por underline
+    - parametros de entrada são opcionais e se tiver mais de um será separada por virgula
+    - o parametro pode não ter retorno 
+- para executar uma função se faz necessário chmar pelo nome e utilizar () colado no nome, sem espaço
+
+-podemos criar variaveis do tipo de uma função e executar esta função atraves da variavel
+
+```python
+# forma geral de defnição
+
+def mome_funcao(parametros_entrada):
+    bloco_funcao
+```
+
+```python
+#exemplo
+
+def diz_oi():
+    print('oi')
+
+# há a possibilidade de ter uma função dentor de outra
+# esta função executa uma tarefa
+#esta função nao recbe parametro de entrada
+# esta função não retorna nada
+
+## para utilizar se faz necessário a sua chamada- nome +()
+
+diz_oi()
+```
+
+```python
+#exemplo 2
+def cantar_parabens():
+    print('parabens pra vc')
+    print('nesta data querida')
+    print('muitas felicidades')
+    print('muitos anos de vida')
+    
+for n in range(5):
+    cantar_parabens()
+```
+
+```python
+#-podemos criar variaveis do tipo de uma função e executar esta função atraves da variavel
+canta= cantar_parabens
+
+canta()
+```
+
+-- funções com retorno
+    - quando uma função não retorna nenhum valor o retorno é none
+    - funções que retornam valores, devem retornar estes valores com a palavra reservada return
+    - não necessariamente precisamos criar uma variavel para receber o retorno de uma função. Podemos passar a execução da função para outras funções 
+    - o return finaliza a função, ou seja, sai da execução da função
+    - podemos ter mais de um return na função
+    - podemos em uma função retornar qualquer tipo de dados, ate multiplos valores
+
+```python
+def quadrado_7():
+    return 7*7
+
+ret=quadrado_7()
+
+print(f'retorno {ret}')
+
+#ou
+print(f'Retorno {quadrado_7}')
+```
+
+```python
+def diz_oi():
+    return 'oi'
+
+alguem = 'pedro'
+
+print(diz_oi() + alguem)
+
+# se estive print ao inves de return daria erro, pq o retorno do print na função seria none e não se pode somar nada com a string da variavel
+```
+
+
+```python
+def diz_oi():
+    return 'oi'
+    print('sendo execuado depois do retorno')
+
+# esse print não será executado pq o retorno finaliza a função
+```
+
+
+```python
+# para testar onde a função é encerrada
+
+def nova_função():
+    variavel = True #ou None 
+    if variavel: # xecutada se a variavel for =True
+        return 4
+    elif variavel is None:
+        return 3.2
+    return 'b'
+```
+
+
+```python
+#função para jogar a moeda
+
+from random import random
+
+def joga_moeda():
+    valor=random()
+    if valor > 0.5:
+        return 'cara'
+    return 'coroa'
+
+print(joga_moeda())
+
+# se observa que não há necessidade de colocar o else
+```
+
+-- funções com parametros
+    - fuções que recebem dados para serem processados dentro da mesma
+
+```python
+def quadrado(numero):
+    return numero * numero
+
+print(quadrado(7))
+print(quadrado(5))
+```
+
+
+```python
+def cantar_parabens(anivesariante):
+    print('parabens pra vc')
+    print('nesta data querida')
+    print('muitas felicidades')
+    print('muitos anos de vida, {aniversariante}')
+    
+cantar_parabens('Marcos')
+
+#se estiver em branco, (), não irá executar pq o parametro é obrigatório
+```
+
+
+```python
+def soma(a, b):
+    return a+b
+
+def multiplica(num1, num2):
+    return num1*num2
+
+def outra(num1, b, msg):
+    return (num1 +b)*msg
+
+
+print(soma(2, 5))
+
+print(multiplica(2, 8))
+
+print(outra(3, 2, 'geek'))
+
+#se for informado um numero errado de parametro ou argumento teremos typeerror
+```
+
+
+-- nomeando parametros
+    - o nome deve corresponder a utilização do item
+
+- parametros são variaveis declradas na definição de uma função
+- argumentos são dados passados durante a execução deuma função
+
+- argumento nomeados
+    - caso utilizemos nomes dos parametros nos argumentos para informa-los podemos utilizar em qualquer ordem, pq vc estará especificando o valor do parametro e não a ordem dele 
+
+```python
+def nome_completo(nome, sobrenome): #parametros
+    return f'{nome} {sobrenome}' 
+
+print(nome_completo('jessica', 'fernandes')) # argumentos
+
+# exemplo de argumento nomeado
+print(nome_completo(nome='maria', sobrenome='lima'))
+```
+
+
+-- função com parametro padrão
+    - função onde a passagem de parametro seja opcional
+    - exemplo o print com () vazio é ignorado
+    - parametro definidos na função são obrigatorios para funcionar
+
+- os parametros informados como padrão são definidos ao final
+
+- se tiver um variavel local (dentro da função) com o mesmo nome de uma variavel global, a local terá preferencia com a global sendo ignorada
+    - com funções é importante evitar a variavel global
+    - para utilizar necessário declarar ela como global >> global nome_variavel
+    - se for uma função dentro de outra função, e nesta segunda função for utilizado variavel da primeira função a forma de declaração é nonlocal >> nonlocal nome_variavel
+
+```python
+def exponencial(numero, potencial): # parametros obrigatorio
+    return nuemro **potencia
+print(exponencial(2,3))
+
+
+# nesse segundo exemplo o parametro numero é obrigatorio informar e o potencial se não for informado será utilizado o 2 como padrão
+def exponencial(numero, potencial=2): #parametro padrão informado no final
+    return nuemro **potencia
+
+print(exponencial(2))
+```
+
+```python
+def soma(num1, num2):
+    return num1+num2
+
+def mat(num1, num2, fun=soma): #um dos parametros é a função desejada que s enão especificada será utilizada a soma
+    return fun(num1, num2)
+
+def subtracao(num1, num2):
+    return num1-num2
+
+print(mat(2,3))
+print(mat(2, 2, subtracao))
+```
+
+```python
+# exemplo de erro pela variavel ter sido iniciada fora da função
+
+total =0
+
+def incrementa():
+    total = total +1
+    return total
+
+print(incrementa)
+
+# forma de arrumar é declarar que a variavel é global
+total =0
+
+def incrementa():
+    global total # aviso da variavel global
+    total = total +1
+    return total
+
+print(incrementa)
+```
+
+- documentando funções om docstrings
+    - se colocar um comentário com """ dentro da função, vc está documentando aquela função, assim se no terminal for utilizado o help(nome_função) irá aparecer o comentário inserido
+    - ou tbm com o comando >> print(nome_função.__doc__)
+
+
+- *args
+    - é um parametro como outro qualquer, pode chamar de qualquer coisa desde que começa com *
+    - utilizado em um função, coloca os valores extras informados como entrada em uma tupla
+    - tupla são imutaveis
+    - pode ser utilizado para não limitação de parametros ou como verificor de informação
+
+```python
+def soma_numeros(num1, num2, num3):
+    return num1+num2+num3
+
+print(soma_numeros(4, 6, 9))
+
+
+# com *args
+def soma_numeros(*args):
+    total=0
+    for numero in args:
+        total=total+numero
+    return
+
+print(soma_numeros())
+print(soma_numeros(1))
+print(soma_numeros(2,3,6,8,9))
+
+# ou ainda
+def soma_numeros(*args):
+    return sum(arg)
+
+print(soma_numeros())
+print(soma_numeros(1))
+print(soma_numeros(2,3,6,8,9))
+```
+
+```python
+def verifica_info(*args):
+    if 'geek' in arg and 'university' in args:
+        return 'bem vindo nerd'
+    return 'eu não sei quem vc é...'
+
+print(verifica_info())
+print(verifica_info(1,  True, 'university', 'geek'))
+print(verifica_info(1, 'university', 3.145)
+```
+
+- **kwargs
+    - o nome poderia ser qualquer um desde que iniciado com **, utiliza kwargs por confensão
+    - como o args é mais parametro, mas ao inves de se tornar uma tupla, transforma em um dicionario
+    - transforma em um dicionario pq utiliza parametros nomeados, pegando chave e valor por tanto
+
+```python
+def cores_favoritas(**kwargs):
+    for pessoa, cor in kwargs.items():
+        print('a cor favorita de {pessoa} é {cor}')
+
+cor_favorita(marcos='verde', julia='amarelo', fernanda='azul', vanessa='branco')
+```
+
+
+- nas funções podemos ter e precisam ser escritos nessa ordem
+    - parametros obrigatórios
+    - *args
+    - parametros default (não obrigatórios)
+    - **kwargs
+
+- 
+
+
+- desempacotar com **kwargs
+
+```python
+def mostra_nomes(**kwargs):
+    return f"{kwargs['nome']} {kwargs['sobrenome']}"
+
+nomes = {'nome':'felicity', 'sobrenome':'jones'}
+
+print(mostra_nomes(**nomes))
+```
+
+
+
+
+
+
+```python
+```
+
 # SEÇÃO 9: COMPREHENSIONS EM PYTHON
 # SEÇÃO 10: EXPRESSÕES LAMBDAS E FUNÇÕES INTEGRADAS
 # SEÇÃO 11: DEBUGANDO E TRATANDO ERROS
@@ -334,13 +777,3 @@ print(cumprimenta(nome='jessi')) #não será pq na definição da função foi c
 
 # SEÇÃO 27: ENCERRAMENTO
 - realizado
-
-
-
-
-
-
-
-
-
-
