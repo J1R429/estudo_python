@@ -364,6 +364,54 @@ for indice, cor in enumerate(cores):
     - print(min(lista)) - valor minimo
     - print(len(lista)) - tamanho da lista
 
+## tuplas
+- parecidas com listas, mas representadas por parentenses (); são imutaveis; python não reconhece como tupla se não tiver virgula, esta é a sua definiçãop não os ()
+    - utilizar sempre que não precisamos ou devemos modificar os dados de uma coleção, por exemplo, meses do ano
+    - tuplas são mais rapidas do que listas
+    - mais segurança por que são imutaveis
+    - (4) - não é tupla; (4, ) é uma tupla
+
+- a concatenação de tuplas é pssovel na criação de uma nova tupla ou na sua sobre escrita; tupla1 = tupla1 + tupla2
+
+```python
+# para contar elementos em uma tupla
+
+tupla = ('a', 'b', 'c', 'd', 'e', 'a', 'b')
+
+print(tupla.count('c'))
+```
+
+```python
+#imprimir indice e valor
+
+tupla = (1, 2, 3)
+
+for indice, valor in enumerate(tupla):
+    print(indice, valor)
+```
+
+```python
+meses=('janeiro', 'fevereiro', 'março', 'abril', 'maio', 'junho', 'julho', 'agosto', 'setembro', 'outubro', 'novembro', 'dezembro')
+
+# imprimir em cada linha
+i=0
+
+while 1<len(meses):
+    print(meses[i])
+    i=i+1
+
+# saber o indice de algum elemento
+print (mese.index('junho')) #se não existir o elemento o resultado é erro
+```
+
+- é possivel o slicing, o pulo
+    - tupla(inicio: fim: passo)
+
+```python
+
+
+```
+
 
 
 
@@ -714,19 +762,35 @@ print(mostra_nomes(**nomes))
 ```
 
 # SEÇÃO 9: COMPREHENSIONS EM PYTHON
+- dimunir as linhas de codigo
+
+
 # SEÇÃO 10: EXPRESSÕES LAMBDAS E FUNÇÕES INTEGRADAS
+
 # SEÇÃO 11: DEBUGANDO E TRATANDO ERROS
+
 # SEÇÃO 12: TRABALHANDO COM MÓDULOS PYTHON
+
 # SEÇÃO 13: LEITURA E ESCRITA EM ARQUIVOS
+
 # SEÇÃO 14: ITERADORES E GERADORES PYTHON
+
 # SEÇÃO 15: DECORADORES EM PYTHON
+
 # SEÇÃO 16: ORIENTAÇÃO A OBJETOS COM PYTHON
+
 # SEÇÃO 17: HERANÇA E POLIMORFISMO
+
 # SEÇÃO 18: MANIPULANDO ARQUIVOS CSV E JSON
+
 # SEÇÃO 19: TRABALHANDO COM DATA E HORA EM PYTHON
+
 # SEÇÃO 20: TESTES COM PYTHON
+
 # SEÇÃO 21: GERENCIAMENTO DE MEMÓRIA EM PYTHON
+
 # SEÇÃO 22: CHEGAGEM DE TIPOS EM PYTHON
+
 
 
 # SEÇÃO 23: NOVIDADES DO PYTHON 3.8
